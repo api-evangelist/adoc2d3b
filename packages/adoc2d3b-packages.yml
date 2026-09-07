@@ -1,0 +1,22 @@
+generated: '2026-09-07'
+method: searched
+source: >-
+  registry.npmjs.org search, pypi.org/pypi/<name>/json, and the whole public adoc.co.kr surface
+  (homepage, /solution, /hospital, /corporate, /kindoccare-cms, /kindoccare-pms, kindoclabs) plus
+  a GitHub organization lookup for vivainnovation, kindoc, adoc-kr and viva-innovation
+package_count: 0
+packages: []
+note: >-
+  No first-party client library exists. Adoc / Viva Innovation publishes no API, so there is nothing
+  for an SDK to wrap, and the search confirmed it: no GitHub organization resolves for
+  vivainnovation, kindoc, adoc-kr or viva-innovation (all HTTP 404 on api.github.com/orgs/<name>);
+  npm search for "kindoc", "adoc-sdk", "vivainnovation" and "chakan" returns only unrelated
+  packages; PyPI has no "kindoc". PyPI DOES have a package literally named "adoc" (0.1.5, a Python
+  code-documentation generator at github.com/saalaa/adoc) and it is NOT this company — recorded here
+  so a later pass does not mistake the name collision for a first-party SDK. No SDKs pointer is
+  emitted from this file.
+registries_checked:
+- {registry: npm, queries: [kindoc, adoc-sdk, vivainnovation, chakan], first_party_hits: 0}
+- {registry: pypi, queries: [kindoc, adoc], first_party_hits: 0, note: '"adoc" exists but belongs to
+    an unrelated project'}
+- {registry: github-orgs, queries: [vivainnovation, kindoc, adoc-kr, viva-innovation], first_party_hits: 0}

@@ -1,0 +1,78 @@
+generated: '2026-09-07'
+method: searched
+source: https://kindoclabs.adoc.co.kr/
+docs: https://kindoclabs.adoc.co.kr/
+note: >-
+  Adoc / Viva Innovation publishes no machine-readable API contract, so none of the cross-cutting
+  API standards below could be derived from a spec — every API-standard row is a recorded absence,
+  not a failure. What the company does publish is a product-and-quality certification posture, on
+  the Kindoc Labs page under "IP & Certifications", and on the hospital-partner page under
+  "데이터 보호 / 강력한 데이터 보안". Those are captured verbatim in certifications[] below. The
+  Kindoc Care PMS product is described by the company as SaMD (Software as a Medical Device), which
+  is what puts the ISO 13485 / K-GMP / MFDS device rows in scope.
+certifications:
+- id: iso-27001
+  name: ISO/IEC 27001 (information security management)
+  claimed: true
+  evidence: 'https://kindoclabs.adoc.co.kr/ — "IP & Certifications … ISO13485, ISO27001, ISO27701,
+    GS(1등급) K-GMP, 식약처 의료기기 인허가(Ⅰ·Ⅱ·Ⅲ)"'
+- id: iso-27701
+  name: ISO/IEC 27701 (privacy information management)
+  claimed: true
+  evidence: https://kindoclabs.adoc.co.kr/ — same "IP & Certifications" block
+- id: iso-13485
+  name: ISO 13485 (medical device quality management)
+  claimed: true
+  evidence: 'https://kindoclabs.adoc.co.kr/ — "IP & Certifications"; also
+    https://www.adoc.co.kr/hospital — "의료기기 품질인증(ISO13485)으로 안전하게 데이터를 보호 중이에요"'
+- id: gs-certification-grade-1
+  name: GS (Good Software) certification, Grade 1 — Korean national software quality certification
+  claimed: true
+  evidence: https://kindoclabs.adoc.co.kr/ — "GS(1등급)"
+- id: k-gmp
+  name: K-GMP (Korea Good Manufacturing Practice, medical devices)
+  claimed: true
+  evidence: https://kindoclabs.adoc.co.kr/ — "K-GMP"
+- id: mfds-medical-device-approval
+  name: MFDS (식약처) medical device licensing, classes I / II / III
+  claimed: true
+  evidence: https://kindoclabs.adoc.co.kr/ — "식약처 의료기기 인허가(Ⅰ·Ⅱ·Ⅲ)"
+standards:
+- id: openapi
+  conforms: false
+  evidence: 'no OpenAPI/Swagger document found; /openapi.json, /openapi.yaml, /swagger.json,
+    /v1/openapi.json, /api-docs, /docs, /redoc all 404 on adoc.co.kr and chat.kindoc.ai'
+- id: graphql
+  conforms: false
+  evidence: no /graphql surface found on any host in apis.yml or in the 154-name certificate-transparency
+    subdomain set for adoc.co.kr
+- id: asyncapi
+  conforms: false
+  evidence: no event, streaming or webhook surface is documented anywhere on the public site
+- id: mcp
+  conforms: false
+  evidence: 'POST tools/list to /mcp, /sse and /api/mcp on chat.kindoc.ai returned 404; the same
+    paths on www.adoc.co.kr return the site-builder 301'
+- id: a2a-agent-card
+  conforms: false
+  evidence: /.well-known/agent-card.json and /.well-known/agent.json 404 on every host probed
+    (see well-known/adoc2d3b-well-known.yml)
+- id: oauth2
+  conforms: false
+  evidence: no /.well-known/oauth-authorization-server or /.well-known/openid-configuration on any
+    host probed; no public OAuth documentation
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: 'the only /.well-known/security.txt found on a company host is Notion''s platform file
+    on the Notion-hosted team.adoc.co.kr, not a document authored by this company'
+- id: apis-json
+  conforms: false
+  evidence: /apis.json, /apis.yml and /.well-known/apis.json 404 on adoc.co.kr and www.adoc.co.kr
+domain_standards:
+  note: >-
+    No domain standard is DECLARED by a contract here, because there is no contract. Korean digital
+    health has real candidates the company touches operationally — HL7 FHIR, and the Health
+    Insurance Review and Assessment Service (HIRA) data its symptom analysis is built on — but
+    nothing in Adoc's public surface declares conformance to either, and this file will not assert
+    one on their behalf.
+  declared: []

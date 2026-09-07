@@ -1,0 +1,18 @@
+generated: '2026-09-07'
+method: probed
+status: none
+source: >-
+  POST {"jsonrpc":"2.0","id":1,"method":"tools/list"} against /mcp, /sse and /api/mcp on
+  chat.kindoc.ai and www.adoc.co.kr, plus a docs and registry search for a published server
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+tools: []
+note: >-
+  No MCP server, hosted or local. All six tools/list probes missed — chat.kindoc.ai (the Kindoc AI /
+  Dr.Patch assistant, a FastAPI-backed chat app) returns {"detail":"Not Found"} on /mcp, /sse and
+  /api/mcp, and www.adoc.co.kr returns the site-builder 301 for the same paths. No npm or PyPI
+  package ships a stdio server for this company (see packages/adoc2d3b-packages.yml), and no
+  candidate tool list could be derived because the repo holds no OpenAPI to derive one from. Nothing
+  is invented here: mode is none and endpoint/install are deliberately absent.

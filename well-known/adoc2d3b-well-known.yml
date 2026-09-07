@@ -1,0 +1,144 @@
+generated: '2026-09-07'
+method: probed
+source: live GET probes of the named /.well-known/ path list on every host in apis.yml plus the
+  hosts named on www.adoc.co.kr (checkup, chat.kindoc.ai, team, kindoc-ai)
+hit_count: 0
+note: >-
+  No document in this probe is authored or served by Adoc / Viva Innovation. Two hosts returned
+  2xx and neither is a real provider hit. (1) checkup.adoc.co.kr is a Next.js catch-all: it answers
+  HTTP 200 with the same ~18KB HTML application shell for every path probed, INCLUDING the
+  negative-control path /.well-known/adoc2d3b-negative-control-7f3ab91c.json which cannot exist, so
+  every 200 on that host is discarded (soft_404_control failed). (2) team.adoc.co.kr serves a real
+  RFC 9116 security.txt, but that host is a Notion custom domain and the file is Notion's own
+  platform security.txt (Contact and Policy both point at
+  www.notion.so/Responsible-Disclosure-Policy-...), not Adoc's — it is saved here as evidence and
+  explicitly NOT credited to this company. Per the pipeline contract no WellKnown and no SecurityTxt
+  pointer is emitted from this file.
+path_echo_control:
+  checkup.adoc.co.kr: failed
+  team.adoc.co.kr: passed
+  adoc.co.kr: passed
+  www.adoc.co.kr: passed
+  chat.kindoc.ai: passed
+  kindoc-ai.adoc.co.kr: passed
+hosts:
+- host: https://adoc.co.kr
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/api-catalog.json, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/ucp.json, status: 404}
+  - {path: /.well-known/acp.json, status: 404}
+  - {path: /.well-known/aauth-resource.json, status: 404}
+  - {path: /.well-known/apis.json, status: 404}
+  - {path: /apis.json, status: 404}
+  - {path: /apis.yml, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /.well-known/adoc2d3b-negative-control-7f3ab91c.json, status: 404}
+- host: https://www.adoc.co.kr
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/api-catalog.json, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/ucp.json, status: 404}
+  - {path: /.well-known/acp.json, status: 404}
+  - {path: /.well-known/aauth-resource.json, status: 404}
+  - {path: /.well-known/apis.json, status: 404}
+  - {path: /apis.json, status: 404}
+  - {path: /apis.yml, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /.well-known/adoc2d3b-negative-control-7f3ab91c.json, status: 404}
+- host: https://checkup.adoc.co.kr
+  soft_404_control:
+    path: /.well-known/adoc2d3b-negative-control-7f3ab91c.json
+    status: 200
+    bytes: 18354
+    verdict: catch-all — every probed path returns the same HTML application shell
+  documents:
+  - {path: /.well-known/security.txt, status: 200, note: HTML app shell, not a document — discarded}
+  - {path: /.well-known/openid-configuration, status: 200, note: HTML app shell — discarded}
+  - {path: /.well-known/oauth-authorization-server, status: 200, note: HTML app shell — discarded}
+  - {path: /.well-known/oauth-protected-resource, status: 200, note: HTML app shell — discarded}
+  - {path: /.well-known/api-catalog, status: 200, note: HTML app shell — discarded}
+  - {path: /.well-known/api-catalog.json, status: 200, note: HTML app shell — discarded}
+  - {path: /.well-known/ai-plugin.json, status: 200, note: HTML app shell — discarded}
+  - {path: /.well-known/ucp.json, status: 200, note: HTML app shell — discarded}
+  - {path: /.well-known/acp.json, status: 200, note: HTML app shell — discarded}
+  - {path: /.well-known/aauth-resource.json, status: 200, note: HTML app shell — discarded}
+  - {path: /.well-known/apis.json, status: 200, note: HTML app shell — discarded}
+  - {path: /apis.json, status: 200, note: HTML app shell — discarded}
+  - {path: /apis.yml, status: 200, note: HTML app shell — discarded}
+  - {path: /.well-known/agent-card.json, status: 200, note: HTML app shell — discarded}
+  - {path: /.well-known/agent.json, status: 200, note: HTML app shell — discarded}
+- host: https://team.adoc.co.kr
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: adoc2d3b-team-notion-security.txt
+    owner: notion
+    note: >-
+      Real RFC 9116 document, but served by Notion for its custom-domain hosting of this company's
+      public Notion workspace. Contact and Policy both resolve to
+      www.notion.so/Responsible-Disclosure-Policy-5f18bb6b86804eaf989c006131778b9c. Not Adoc's
+      disclosure program; saved as evidence only and not credited to this company.
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/api-catalog.json, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/ucp.json, status: 404}
+  - {path: /.well-known/acp.json, status: 404}
+  - {path: /.well-known/aauth-resource.json, status: 404}
+  - {path: /.well-known/apis.json, status: 404}
+  - {path: /apis.json, status: 404}
+  - {path: /apis.yml, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /.well-known/adoc2d3b-negative-control-7f3ab91c.json, status: 404}
+- host: https://chat.kindoc.ai
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/api-catalog.json, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/ucp.json, status: 404}
+  - {path: /.well-known/acp.json, status: 404}
+  - {path: /.well-known/aauth-resource.json, status: 404}
+  - {path: /.well-known/apis.json, status: 404}
+  - {path: /apis.json, status: 404}
+  - {path: /apis.yml, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /.well-known/adoc2d3b-negative-control-7f3ab91c.json, status: 404}
+- host: https://kindoc-ai.adoc.co.kr
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/api-catalog.json, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/ucp.json, status: 404}
+  - {path: /.well-known/acp.json, status: 404}
+  - {path: /.well-known/aauth-resource.json, status: 404}
+  - {path: /.well-known/apis.json, status: 404}
+  - {path: /apis.json, status: 404}
+  - {path: /apis.yml, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /.well-known/adoc2d3b-negative-control-7f3ab91c.json, status: 404}

@@ -1,0 +1,10 @@
+generated: '2026-09-07'
+method: searched
+source: https://www.adoc.co.kr/
+limit_count: 0
+rate_limits: []
+note: >-
+  No published rate limits, and no surface that could carry them. Adoc / Viva Innovation exposes no
+  public API, no developer documentation and no machine-readable contract, so there is no
+  documented quota, window, burst or exhaustion status code, and no RateLimit-* / X-RateLimit-* /
+  Retry-After response header to observe. Recorded as an honest zero rather than omitted.

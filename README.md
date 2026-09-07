@@ -1,4 +1,4 @@
-# Adoc2d3b
+# Adoc (Viva Innovation)
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,30 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Adoc2d3b is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/adoc2d3b
+Adoc is the corporate web presence of Viva Innovation Inc. (주식회사 비바이노베이션), a Seoul, South Korea health-technology company founded in January 2018 and based in Gangnam-gu, which operates the health-checkup and medical-records platform 착한의사 (Chakan Uisa / Kindoc). Consumers use the Kindoc mobile and web apps to pull scattered personal medical records into one place, run an AI symptom check against personal and Health Insurance Review and Assessment Service data, compare hospital examination packages and their costs, and book discounted health screenings; employers buy the same screenings as corporate checkup programs, and partner hospitals join through a hospital-affiliation program. For providers the company sells a medical cloud — Kindoc Care CMS and Kindoc Care PMS for checkup centres — alongside a medical AI line it splits into Preventive AI (test-item recommendation, plain-language result explanation, biomarker and biological-age analysis), Clinical AI (comprehensive findings generation, abnormal-finding triage, follow-up test recommendation) and Decision Support AI (disease-risk analysis from repeated checkup results, endoscopy anaesthesia-risk prediction, real-time endoscopic polyp detection), plus a generative "주치의 AI" assistant published as Dr.Patch at chat.kindoc.ai and a research arm, Kindoc Labs. Everything the company ships is a consumer app, a partner landing page or hospital-side software: as of this profile it publishes no developer portal, no API reference, no SDK and no machine-readable API contract on any host it operates.
+
+## Links
+
+- [Website](https://www.adoc.co.kr/)
+- [About](https://www.adoc.co.kr/1738bf80b49d8013b8d6fc1ebe7b5c6c)
+- [Solutions](https://www.adoc.co.kr/solution)
+- [Products](https://www.adoc.co.kr/kindoccare-cms)
+- [Careers](https://www.adoc.co.kr/recruit)
+- [Blog](https://post.naver.com/my.naver?memberNo=45438006)
+- [Support](https://n481v.channel.io/support-bots/71968)
+- [TermsOfService](https://team.adoc.co.kr/services)
+- [PrivacyPolicy](https://team.adoc.co.kr/privacy-policy)
+- [LinkedIn](https://kr.linkedin.com/company/%EC%A3%BC-%EB%B9%84%EB%B0%94%EC%9D%B4%EB%85%B8%EB%B2%A0%EC%9D%B4%EC%85%98-vivainnovation)
+- [SecondaryMarket](https://equityzen.com/company/adoc2d3b/)
+- [Compliance](https://kindoclabs.adoc.co.kr/)
+
+## What this profile contains
+
+This company publishes no API. The artifacts in this repository record that measurement rather than
+an API surface: `well-known/` holds the full `/.well-known/` probe across six company hosts (every
+path a 404, plus the catch-all and negative-control findings), `conformance/` captures the
+certifications the company does publish (ISO 13485, ISO 27001, ISO 27701, GS Grade 1, K-GMP, MFDS
+device classes I/II/III) alongside the recorded absence of each API standard, `packages/`,
+`plans/`, `rate-limits/` and `mcp/` record honest zeros with the searches behind them, and
+`security/` holds the live TLS/DNS probe. See `x-coverage` in `apis.yml` for why this profile is
+thin.
