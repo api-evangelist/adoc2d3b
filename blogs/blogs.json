@@ -1,0 +1,14 @@
+{
+  "repo": "adoc2d3b",
+  "feeds": [
+    {
+      "source": "https://www.adoc.co.kr/recruit",
+      "feed_url": "https://www.adoc.co.kr/recruit",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-09-13T13:00:00Z"
+}
