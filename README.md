@@ -66,28 +66,94 @@
 
 Adoc is the corporate web presence of Viva Innovation Inc. (주식회사 비바이노베이션), a Seoul, South Korea health-technology company founded in January 2018 and based in Gangnam-gu, which operates the health-checkup and medical-records platform 착한의사 (Chakan Uisa / Kindoc). Consumers use the Kindoc mobile and web apps to pull scattered personal medical records into one place, run an AI symptom check against personal and Health Insurance Review and Assessment Service data, compare hospital examination packages and their costs, and book discounted health screenings; employers buy the same screenings as corporate checkup programs, and partner hospitals join through a hospital-affiliation program. For providers the company sells a medical cloud — Kindoc Care CMS and Kindoc Care PMS for checkup centres — alongside a medical AI line it splits into Preventive AI (test-item recommendation, plain-language result explanation, biomarker and biological-age analysis), Clinical AI (comprehensive findings generation, abnormal-finding triage, follow-up test recommendation) and Decision Support AI (disease-risk analysis from repeated checkup results, endoscopy anaesthesia-risk prediction, real-time endoscopic polyp detection), plus a generative "주치의 AI" assistant published as Dr.Patch at chat.kindoc.ai and a research arm, Kindoc Labs. Everything the company ships is a consumer app, a partner landing page or hospital-side software: as of this profile it publishes no developer portal, no API reference, no SDK and no machine-readable API contract on any host it operates.
 
-## Links
+**Areas:** Company · Healthcare · Health Checkup · Medical Records · Preventive Medicine · Artificial Intelligence · Digital Health · Clinical Data · Hospital Software · South Korea
+
+## Adoc (Viva Innovation) on APIs.io
+
+Everything profiled for Adoc (Viva Innovation) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/adoc2d3b/](https://apis.io/providers/adoc2d3b/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Adoc2D3B Domain Security](https://apis.io/security/adoc2d3b/adoc2d3b-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Adoc2D3B Plans Pricing](https://apis.io/plans/adoc2d3b/adoc2d3b-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Adoc2D3B Rate Limits](https://apis.io/rate-limits/adoc2d3b/adoc2d3b-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.adoc.co.kr/)
-- [About](https://www.adoc.co.kr/1738bf80b49d8013b8d6fc1ebe7b5c6c)
-- [Solutions](https://www.adoc.co.kr/solution)
-- [Products](https://www.adoc.co.kr/kindoccare-cms)
-- [Careers](https://www.adoc.co.kr/recruit)
-- [Blog](https://post.naver.com/my.naver?memberNo=45438006)
 - [Support](https://n481v.channel.io/support-bots/71968)
-- [TermsOfService](https://team.adoc.co.kr/services)
-- [PrivacyPolicy](https://team.adoc.co.kr/privacy-policy)
-- [LinkedIn](https://kr.linkedin.com/company/%EC%A3%BC-%EB%B9%84%EB%B0%94%EC%9D%B4%EB%85%B8%EB%B2%A0%EC%9D%B4%EC%85%98-vivainnovation)
-- [SecondaryMarket](https://equityzen.com/company/adoc2d3b/)
+- [Blog](https://post.naver.com/my.naver?memberNo=45438006)
 - [Compliance](https://kindoclabs.adoc.co.kr/)
+- [Terms of service](https://team.adoc.co.kr/services)
+- [Privacy policy](https://team.adoc.co.kr/privacy-policy)
 
-## What this profile contains
+## API Evangelist rating
 
-This company publishes no API. The artifacts in this repository record that measurement rather than
-an API surface: `well-known/` holds the full `/.well-known/` probe across six company hosts (every
-path a 404, plus the catch-all and negative-control findings), `conformance/` captures the
-certifications the company does publish (ISO 13485, ISO 27001, ISO 27701, GS Grade 1, K-GMP, MFDS
-device classes I/II/III) alongside the recorded absence of each API standard, `packages/`,
-`plans/`, `rate-limits/` and `mcp/` record honest zeros with the searches behind them, and
-`security/` holds the live TLS/DNS probe. See `x-coverage` in `apis.yml` for why this profile is
-thin.
+**Kin Score 10.0** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 14.0** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/adoc2d3b/](https://apis.io/providers/adoc2d3b/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Adoc (Viva Innovation): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/adoc2d3b/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
